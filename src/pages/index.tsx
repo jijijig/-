@@ -1,10 +1,10 @@
-"use client";
 import React, { useState } from "react";
 import styled from "styled-components";
 import Image from "next/image";
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
+
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
@@ -14,23 +14,27 @@ export default function Home() {
       (prevIndex) => (prevIndex - 1 + images.length) % images.length
     );
   };
+
   const images = ["/main-img/01.png", "/main-img/02.png", "/main-img/03.png"];
+
   return (
     <Wrapper>
-      <Top></Top>
+      <Top />
       <SliderContainer>
         <Button onClick={handlePrev}>{"<"}</Button>
         <ImageContainer>
           <ImageWrapper
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
             {images.map((src, index) => (
-              <Image
-                key={index}
-                src={src}
-                alt={`Description ${index + 1}`}
-                layout="fill"
-                objectFit="cover"
-              />
+              <EachImageWrapper key={index}>
+                <Image
+                  src={src}
+                  alt={`Description ${index + 1}`}
+                  layout="responsive"
+                  width={600}
+                  height={300}
+                />
+              </EachImageWrapper>
             ))}
           </ImageWrapper>
         </ImageContainer>
@@ -52,13 +56,16 @@ const Top = styled.div`
 
 const SliderContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
+  position: relative;
 `;
 
 const ImageWrapper = styled.div`
+  display: flex;
   flex: none;
-  width: 80vw;
+  width: 100%;
   position: relative;
   transition: transform 0.5s ease-in-out;
 `;
@@ -68,10 +75,25 @@ const Button = styled.button`
   background: #ddd;
   border: none;
   padding: 10px 20px;
-  margin: 10px;
+  position: absolute;
+  top: 15%;
+  transform: translateY(-50%);
+  &:first-of-type {
+    left: 10px;
+  }
+  &:last-of-type {
+    right: 10px;
+  }
 `;
+
 const ImageContainer = styled.div`
   display: flex;
   width: 80vw;
   overflow: hidden;
+`;
+
+const EachImageWrapper = styled.div`
+  flex: none;
+  width: 80vw;
+  position: relative;
 `;
