@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Image from "next/image";
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const images = ["/main-img/01.png", "/main-img/02.png", "/main-img/03.png"];
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -14,8 +16,12 @@ export default function Home() {
       (prevIndex) => (prevIndex - 1 + images.length) % images.length
     );
   };
-
-  const images = ["/main-img/01.png", "/main-img/02.png", "/main-img/03.png"];
+useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext();
+    }, 3000); 
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <Wrapper>
@@ -23,23 +29,21 @@ export default function Home() {
       <SliderContainer>
         <Button onClick={handlePrev}>{"<"}</Button>
         <ImageContainer>
-          <ImageWrapper
-            style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+          <ImageWrapper style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
             {images.map((src, index) => (
               <EachImageWrapper key={index}>
-                <Image
-                  src={src}
-                  alt={`Description ${index + 1}`}
-                  layout="responsive"
-                  width={600}
-                  height={300}
-                />
+                <Image src={src} alt={`Description ${index + 1}`} layout="responsive" width={600} height={300} />
               </EachImageWrapper>
             ))}
           </ImageWrapper>
         </ImageContainer>
         <Button onClick={handleNext}>{">"}</Button>
       </SliderContainer>
+      <DotsContainer>
+        {images.map((_, index) => (
+          <Dot key={index} isActive={index === currentIndex} onClick={() => setCurrentIndex(index)} />
+        ))}
+      </DotsContainer>
     </Wrapper>
   );
 }
@@ -96,4 +100,24 @@ const EachImageWrapper = styled.div`
   flex: none;
   width: 80vw;
   position: relative;
+`;
+
+const DotsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+`;
+
+const Dot = styled.div<{ isActive: boolean }>`
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: ${({ isActive }) => (isActive ? 'black' : 'grey')};
+  border-radius: 50%;
+  display: inline-block;
+
+  &:hover {
+    background-color: ${({ isActive }) => (isActive ? 'black' : 'darkgrey')};
+  }
 `;
