@@ -4,7 +4,5 @@
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
   "/about": "pages/about.js",
-  "/vendor": "pages/vendor.js",
-  "/work": "pages/work.js",
-  "/member": "pages/member.js"
+  "/work": "pages/work.js"
 }

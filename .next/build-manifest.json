@@ -32,16 +32,6 @@
       "static/chunks/main.js",
       "static/chunks/pages/about.js"
     ],
-    "/member": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/member.js"
-    ],
-    "/vendor": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/vendor.js"
-    ],
     "/work": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
