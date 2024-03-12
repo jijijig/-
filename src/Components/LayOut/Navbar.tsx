@@ -18,13 +18,23 @@ export default function Navbar() {
 
 const Warpapper = styled.div`
 display: flex;
-justify-content: space-between;
-padding: 10px 20px;
-max-width: 1200px;
-margin: 0 auto;
-a {
-  font-size: 20px;
-  text-decoration: none;
-  color: #333;
-}
+  justify-content: space-around; 
+  align-items: center; 
+  padding: 10px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #004d40; 
+  border-radius:  0 0 10px 10px;
+  gap: 20px;
+
+  a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff; 
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #80cbc4;
+    }
+  }
 `;
