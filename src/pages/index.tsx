@@ -32,7 +32,8 @@ useEffect(() => {
           <ImageWrapper style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
             {images.map((src, index) => (
               <EachImageWrapper key={index}>
-                <Image src={src} alt={`Description ${index + 1}`} layout="responsive" width={600} height={300} />
+                <Image src={src} alt={`Description ${index + 1}`}  fill style={{ objectFit: 'cover' }} />
+
               </EachImageWrapper>
             ))}
           </ImageWrapper>
@@ -40,10 +41,10 @@ useEffect(() => {
         <Button onClick={handleNext}>{">"}</Button>
       </SliderContainer>
       <DotsContainer>
-        {images.map((_, index) => (
-          <Dot key={index} isActive={index === currentIndex} onClick={() => setCurrentIndex(index)} />
-        ))}
-      </DotsContainer>
+  {images.map((_, index) => (
+    <Dot key={index} $isActive={index === currentIndex} onClick={() => setCurrentIndex(index)} /> // `isActive`를 `$isActive`로 변경
+  ))}
+</DotsContainer>
     </Wrapper>
   );
 }
@@ -80,7 +81,7 @@ const Button = styled.button`
   border: none;
   padding: 10px 20px;
   position: absolute;
-  top: 15%;
+  top: 50%;
   transform: translateY(-50%);
   &:first-of-type {
     left: 10px;
@@ -98,7 +99,9 @@ const ImageContainer = styled.div`
 
 const EachImageWrapper = styled.div`
   flex: none;
+  margin-top:10%;
   width: 80vw;
+  height: 60vh;
   position: relative;
 `;
 
@@ -108,16 +111,16 @@ const DotsContainer = styled.div`
   margin-top: 10px;
 `;
 
-const Dot = styled.div<{ isActive: boolean }>`
+const Dot = styled.div<{ $isActive: boolean }>`
   cursor: pointer;
   height: 10px;
   width: 10px;
   margin: 0 5px;
-  background-color: ${({ isActive }) => (isActive ? 'black' : 'grey')};
+  background-color: ${({ $isActive }) => ($isActive ? 'black' : 'grey')}; 
   border-radius: 50%;
   display: inline-block;
 
   &:hover {
-    background-color: ${({ isActive }) => (isActive ? 'black' : 'darkgrey')};
+    background-color: ${({ $isActive }) => ($isActive ? 'black' : 'darkgrey')}; 
   }
 `;

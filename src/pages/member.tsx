@@ -5,15 +5,15 @@ export default function member() {
   const members = [
     {
       id: 1,
-      name: "멤버 1",
-      description: "멤버 1 설명",
-      imageUrl: "멤버1 이미지",
+      name: "이현우",
+      description: "팀장 & 프론트엔드 개발자",
+      imageUrl: "path/member/member1.jpeg",
     },
     {
       id: 2,
-      name: "멤버 2",
-      description: "멤버 2 설명",
-      imageUrl: "멤버2 이미지",
+      name: "최민우",
+      description: "백엔드 개발자",
+      imageUrl: "path/member/member2.jpeg",
     },
   ];
   return (
