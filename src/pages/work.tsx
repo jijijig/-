@@ -80,21 +80,21 @@ export default function Work() {
     },
     {
       id: 12,
-      src: "/path/to/image9.jpg",
-      title: "작업물 9",
-      description: "이미지 9 설명",
+      src: "/path/to/image12.jpg",
+      title: "작업물 2",
+      description: "이미지 12 설명",
     },
     {
       id: 13,
-      src: "/path/to/image10.jpg",
-      title: "작업물 10",
-      description: "이미지 10 설명",
+      src: "/path/to/image13.jpg",
+      title: "작업물 13",
+      description: "이미지 13 설명",
     },
     {
       id: 14,
-      src: "/path/to/image11.jpg",
-      title: "작업물 11",
-      description: "이미지 11 설명",
+      src: "/path/to/image14.jpg",
+      title: "작업물 14",
+      description: "이미지 14 설명",
     },
   ];
 
