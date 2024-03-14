@@ -65,6 +65,7 @@ const SliderContainer = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
+  
 `;
 
 const ImageWrapper = styled.div`
@@ -73,21 +74,25 @@ const ImageWrapper = styled.div`
   width: 100%;
   position: relative;
   transition: transform 0.5s ease-in-out;
+ 
 `;
 
 const Button = styled.button`
   cursor: pointer;
-  background: #ddd;
+  background: #f5f5f5;
   border: none;
   padding: 10px 20px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
   &:first-of-type {
-    left: 10px;
+    left: 5%;
   }
   &:last-of-type {
-    right: 10px;
+    right: 5%;
   }
 `;
 
@@ -95,6 +100,7 @@ const ImageContainer = styled.div`
   display: flex;
   width: 80vw;
   overflow: hidden;
+  border-radius: 10px;
 `;
 
 const EachImageWrapper = styled.div`
@@ -103,6 +109,7 @@ const EachImageWrapper = styled.div`
   width: 80vw;
   height: 60vh;
   position: relative;
+  
 `;
 
 const DotsContainer = styled.div`
