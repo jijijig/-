@@ -49,6 +49,7 @@ const MemberCard = styled.div`
   padding: 20px;
   border-radius: 8px;
   width: 300px;
+  background-color: #f9f9f9;
 `;
 
 const MemberImage = styled.img`

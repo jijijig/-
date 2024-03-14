@@ -50,6 +50,9 @@ const Container = styled.div`
   max-width: 800px;
   margin: auto;
   padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
 `;
 
 const Title = styled.h1`

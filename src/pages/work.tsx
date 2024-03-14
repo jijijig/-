@@ -137,10 +137,12 @@ const Grid = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem;
   padding: 1rem;
+  
 `;
 
 const WorkItem = styled.div`
   cursor: pointer;
+  background-color: #f9f9f9;
 `;
 
 const Image = styled.img`
