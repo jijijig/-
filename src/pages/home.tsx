@@ -6,35 +6,31 @@ import HomeSub from "@/Components/Home/Homesub";
 export default function home() {
   return (
     <Warpper>
-        <div className="homeblock1">
-        <HomeTitle/>
-        </div>
-        <div className="homeblock2">
-        <HomeSub/>
-        </div>
-
-        
+      <div className="homeblock1">
+        <HomeTitle />
+      </div>
+      <div className="homeblock2">
+        <HomeSub />
+      </div>
     </Warpper>
-  )
+  );
 }
 const Warpper = styled.div`
-margin: 67px 0 0 10% ;
-padding: 0;
-width: 80vw;
-height: 60vh;
-background-color: #f5f5f5;
-display: flex;
-justify-content: space-around;
-.homeblock1{
+  margin: 67px 0 0 10%;
+  padding: 0;
+  width: 80vw;
+  height: 60vh;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: space-around;
+  .homeblock1 {
     width: 50%;
     height: 100%;
-    background-color: green;
-    }
-.homeblock2{
+    background-color: #ffffff;
+  }
+  .homeblock2 {
     width: 50%;
     height: 100%;
     background-color: yellow;
-    }
-
+  }
 `;
-
