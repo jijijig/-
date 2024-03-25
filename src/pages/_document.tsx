@@ -37,7 +37,7 @@ export default class MyDocument extends Document {
           <style>{`
             body { 
               margin: 0; 
-              background-color: #fcd0a1;
+              background-color: #FFFFFF;
             }
           `}</style>
         </Head>
