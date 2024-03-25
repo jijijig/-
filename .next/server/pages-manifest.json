@@ -1,9 +1,14 @@
 {
   "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+<<<<<<< HEAD
   "/": "pages/index.js",
   "/about": "pages/about.js",
   "/work": "pages/work.js",
   "/vendor": "pages/vendor.js"
+=======
+  "/_error": "pages/_error.js",
+  "/home": "pages/home.js",
+  "/": "pages/index.js"
+>>>>>>> 718cf3bec81b70d3b3f124ba9dcb293e0ab3a58f
 }
