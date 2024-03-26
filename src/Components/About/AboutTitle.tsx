@@ -24,7 +24,7 @@ title: `어떤 기기를 사용하더라도
   )
 }
 const Container = styled.div`
-
+margin-top: 100px;
 `;
 const Title = styled.div`
 width: 500px;

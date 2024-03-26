@@ -15,17 +15,8 @@ export default function TeamInfo() {
 }
 
 const Container = styled.div`
-
   display: flex;
-  justify-content: space-around;
-  .aboutblock1 {
-    width: 50%;
-    height: 100%;
-    background-color: #ffffff;
-  }
-  .aboutblock2 {
-    width: 50%;
-    height: 100%;
-  
-  }
+  justify-content: center;
+  gap: 100px;
+
 `;

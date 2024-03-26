@@ -20,6 +20,7 @@ export default function member() {
   
     <PageContainer>
     <h2>팀 멤버 소개</h2>
+    <p>최악의 상황에서도 동작하는 사이트를 만들자는 목표를 가지고 제작합니다.</p>
     <MemberList>
       {members.map(member => (
         <MemberCard key={member.id}>
@@ -34,6 +35,22 @@ export default function member() {
 }
 const PageContainer = styled.div`
   text-align: center;
+  h2 {  
+font-family: Inter;
+font-size: 40px;
+font-weight: 700;
+line-height: 48px;
+text-align: center;
+  }
+  p {
+
+font-family: Inter;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+text-align: center;
+
+  }
 `;
 
 const MemberList = styled.div`
@@ -53,7 +70,8 @@ const MemberCard = styled.div`
 `;
 
 const MemberImage = styled.img`
-  width: 100%;
+  width: 270px;
+  height: 320px;
   border-radius: 8px;
 `;
 
