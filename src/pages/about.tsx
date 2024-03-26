@@ -7,19 +7,15 @@ import AboutTitle from '@/Components/About/AboutTitle';
 export default function TeamInfo() {
   return (
     <Container>
-    <AboutTitle/>
+    
    <AboutSub/>
-
+   <AboutTitle/>
     </Container>
   );
 }
 
 const Container = styled.div`
-margin: 67px 0 0 10%;
-  padding: 0;
-  width: 80vw;
-  height: 60vh;
-  background-color: #f5f5f5;
+
   display: flex;
   justify-content: space-around;
   .aboutblock1 {
