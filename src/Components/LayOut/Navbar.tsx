@@ -7,11 +7,11 @@ export default function Navbar() {
   return (
     <Warpapper>
       <div className="SiteMain">
-        <Link href="/Home">지지직</Link>
+        <Link href="/home">지지직</Link>
       </div>
       <div className="SiteSub">
-        <Link href="/about">Home</Link>
-        <Link href="/work">About</Link>
+        <Link href="/home">Home</Link>
+        <Link href="/about">About</Link>
         <Link href="/member">Member</Link>
         <Link href="/vendor">Portfolio</Link>
       </div>

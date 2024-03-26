@@ -25,6 +25,7 @@ const Warpapper = styled.div`
 const ImageWrapper = styled.div`
   width: 100%;
   height: 100%;
+  margin-left: 10%;
   border-radius: 110px 8px 8px 8px;
   overflow: hidden;
 `;

@@ -31,6 +31,6 @@ const Warpper = styled.div`
   .homeblock2 {
     width: 50%;
     height: 100%;
-    background-color: yellow;
+  
   }
 `;
