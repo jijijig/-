@@ -1,15 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
-import AboutSub from '@/Components/About/AboutSub';
-import AboutTitle from '@/Components/About/AboutTitle';
-
+import React from "react";
+import styled from "styled-components";
+import AboutSub from "@/Components/About/AboutSub";
+import AboutTitle from "@/Components/About/AboutTitle";
 
 export default function TeamInfo() {
   return (
     <Container>
-    
-   <AboutSub/>
-   <AboutTitle/>
+      <AboutSub />
+      <AboutTitle />
     </Container>
   );
 }
@@ -17,6 +15,6 @@ export default function TeamInfo() {
 const Container = styled.div`
   display: flex;
   justify-content: center;
+  height: 100%;
   gap: 100px;
-
 `;
