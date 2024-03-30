@@ -20,7 +20,7 @@ const Warpper = styled.div`
   padding: 0;
   width: 80vw;
   height: 60vh;
-  background-color: #f5f5f5;
+
   display: flex;
   justify-content: space-around;
   .homeblock1 {
@@ -29,8 +29,8 @@ const Warpper = styled.div`
     background-color: #ffffff;
   }
   .homeblock2 {
-    width: 50%;
+    margin-left: 5%;
+    width: 40%;
     height: 100%;
-  
   }
 `;

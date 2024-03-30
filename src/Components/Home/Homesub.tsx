@@ -7,7 +7,7 @@ export default function Homesub() {
     <Warpapper>
       <ImageWrapper>
         <Image
-          src="/path/domidomi/image1.png"
+          src="/main-img/dumi-main.png"
           alt="home"
           width={491}
           height={515}
@@ -25,7 +25,6 @@ const Warpapper = styled.div`
 const ImageWrapper = styled.div`
   width: 100%;
   height: 100%;
-  margin-left: 10%;
   border-radius: 110px 8px 8px 8px;
   overflow: hidden;
 `;
