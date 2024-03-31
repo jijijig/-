@@ -1,19 +1,34 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import styled from "styled-components";
-
+import styled, { css } from "styled-components";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+interface StyledLinkProps {
+  active: boolean;
+}
 export default function Navbar() {
+  const router = useRouter();
+  const isActive = (path: string) => router.pathname === path;
+
   return (
     <Warpapper>
       <div className="SiteMain">
         <Link href="/home">지지직</Link>
       </div>
       <div className="SiteSub">
-        <Link href="/home">Home</Link>
-        <Link href="/about">About</Link>
-        <Link href="/member">Member</Link>
-        <Link href="/vendor">Portfolio</Link>
+        <StyledLink href="/home" active={isActive("/home")}>
+          Home
+        </StyledLink>
+        <StyledLink href="/about" active={isActive("/about")}>
+          About
+        </StyledLink>
+        <StyledLink href="/member" active={isActive("/member")}>
+          Member
+        </StyledLink>
+        <StyledLink href="/vendor" active={isActive("/vendor")}>
+          Portfolio
+        </StyledLink>
       </div>
     </Warpapper>
   );
@@ -48,4 +63,17 @@ const Warpapper = styled.div`
       color: black;
     }
   }
+`;
+const StyledLink = styled(Link)<StyledLinkProps>`
+  font-size: 20px;
+  text-decoration: none;
+  color: #111928;
+  transition: color 0.3s ease;
+
+  ${({ active }) =>
+    active &&
+    css`
+      font-weight: bold;
+      color: black;
+    `}
 `;
