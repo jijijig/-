@@ -24,7 +24,6 @@ const Warpper = styled.div`
   padding: 0;
   width: 80vw;
   height: 60vh;
-  background-color: #f5f5f5;
   display: flex;
   justify-content: space-around;
   .homeblock1 {
@@ -32,13 +31,29 @@ const Warpper = styled.div`
     flex-direction: column;
     align-items: center;
     .mainp {
-      margin-top: 40px;
+      margin: 8px;
       font-family: Inter;
       font-size: 18px;
       font-weight: 600;
       line-height: 26px;
       text-align: center;
-      color: #3758f9;
+      color: #3758F9;
+    }
+    h2{
+      margin: 0;
+font-family: Inter;
+font-size: 40px;
+font-weight: 700;
+line-height: 48px;
+text-align: center;
+    }
+    .explanation {
+      font-family: Inter;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: center;
+      
     }
   
   
